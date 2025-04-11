@@ -15,8 +15,9 @@ public class Starptr {
              for(int j = 0; j<=2; j++){
                  if(i==0 || j==0 || i==2 || j==2)
                  System.out.print("* ");
+        
              }
-             System.out.println("  ");
+             System.out.println();
          }
         // char ch = 'a';
         // for(int i = 1; i<=5; i++){
