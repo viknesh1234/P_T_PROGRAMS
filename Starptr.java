@@ -11,14 +11,16 @@ public class Starptr {
         //     System.out.println("");
         // }
 
-         for(int i = 0; i<=2; i++){
-             for(int j = 0; j<=2; j++){
-                 if(i==0 || j==0 || i==2 || j==2)
-                 System.out.print("* ");
+        for (int i = 0; i <= 2; i++) {
+            for (int j = 0; j <= 2; j++) {
+                if (i == 1 || i == 0 || j == 2)
+                    System.out.print("* ");
+                else
+                    System.out.print("  "); // Print two spaces for alignment
+            }
+            System.out.println();
+        }
         
-             }
-             System.out.println();
-         }
         // char ch = 'a';
         // for(int i = 1; i<=5; i++){
         //     ch='a';
