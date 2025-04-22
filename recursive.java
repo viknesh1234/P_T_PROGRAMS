@@ -25,23 +25,33 @@ public class recursive {
     //     System.out.println(sumofDigit(n));
    // }
 
-   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter the Number : ");
-    int n =sc.nextInt();
-    int mask = Integer.MIN_VALUE;
-    String s = "";
-    while(mask!=0){
-        if((n&mask) ==0){
-            s=s+"0";
-        }
-        else{
-            s = s+"1";
-        }
-        mask = mask>>>1;
-    }
-    System.out.println("Binary value : ");
-    System.out.println(s);
+//    public static void main(String[] args) {
+//     Scanner sc = new Scanner(System.in);
+//     System.out.println("Enter the Number : ");
+//     int n =sc.nextInt();
+//     int mask = Integer.MIN_VALUE;
+//     String s = "";
+//     while(mask!=0){
+//         if((n&mask) ==0){
+//             s=s+"0";
+//         }
+//         else{
+//             s = s+"1";
+//         }
+//         mask = mask>>>1;
+//     }
+//     System.out.println("Binary value : ");
+//     System.out.println(s);
 
-   }
+//    }
+public static int fun (int n) {
+    if(n==0 || n==1){
+        return 1;
+    }
+    return fun(n-2) + fun(n-1);
+    
+}
+public static void main(String[] args) {
+    System.out.println(fun(7));
+}
 }
