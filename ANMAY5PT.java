@@ -38,7 +38,7 @@ class SingleLinkedList{
 		}
 	}
 }
-class Main {
+class ANMAY5PT {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		SingleLinkedList sll = new SingleLinkedList();
@@ -48,8 +48,8 @@ class Main {
 		sll.insertAtEnd(30);
 		sll.insertAtBegin(5);
 		sll.insertAtBegin(4);
-		sll.display();
 		
+		sll.insertAtBegin(3);
 	
 	}
 }
