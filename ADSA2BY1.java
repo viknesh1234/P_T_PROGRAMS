@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Queue;
 import java.util.LinkedList;
 
-public class ADSA2BY {
+public class ADSA2BY1 {
     static class TreeNode {
         int val;
         TreeNode left, right;
@@ -53,34 +53,42 @@ public class ADSA2BY {
             }
         }
         return root;
-    }
-        public static void inorderTraversal(TreeNode root) {
-        if(root == null) 
-        return;
-        inorderTraversal(root.left);
-        System.out.print(root.val + " ");
-        inorderTraversal(root.right);
-        }
+    }// Inorder traversal
+public static void inorderTraversal(TreeNode root) {
+    if(root == null) return;
+    inorderTraversal(root.left);
+    System.out.print(root.val + " ");
+    inorderTraversal(root.right);
+}
 
-        // preorder traversal
-        public static void preorderTraversal(TreeNode root) {
-        if(root == null){
-            return;
-            System.out.print(root.val + "");
-            preorderTraversal(root.left);
-            preorderTraversal(root.right);
-        
-        }
+// Preorder traversal
+public static void preorderTraversal(TreeNode root) {
+    if(root == null) return;
+    System.out.print(root.val + " ");   // Print first
+    preorderTraversal(root.left);       // Then left
+    preorderTraversal(root.right);      // Then right
+}
+
+// Postorder traversal
+public static void postorderTraversal(TreeNode root) {
+    if(root == null) return;
+    postorderTraversal(root.left);      // Left first
+    postorderTraversal(root.right);     // Then right
+    System.out.print(root.val + " ");   // Print last
+}
 
     
-
+    
     public static void main(String[] args) {
         TreeNode root = buildTreeFromInput();
-
-        if(isCompleteTree(root)) {
-            System.out.println("The tree is a complete binary tree.");
-        } else {
-            System.out.println("The tree is not a complete binary tree.");
-        }
+        System.out.println("Inorder Traversal:");
+        inorderTraversal(root);
+        System.out.println();
+        System.out.println("Preorder Traversal:");
+        preorderTraversal(root);
+        System.out.println();
+        System.out.println("postorder Traversal : ");
+        postorderTraversal(root);
+        System.out.println();
     }
 }
